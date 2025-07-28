@@ -221,10 +221,18 @@ button {
 }
 
 /*==================== CONTENT GRID ====================*/
-.content-grid {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-16);
+/* 文档区域 - 3列布局 */
+#documents .content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+/* 视频区域 - 2列布局 */
+#videos .content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
 }
 
 /*==================== PDF DOCUMENT STYLES ====================*/
@@ -236,6 +244,9 @@ button {
   overflow: hidden;
   transition: all 0.3s ease;
   position: relative;
+  width: 550px;
+  height: 610px;
+  margin: 0 auto;
 }
 
 .pdf-document::before {
@@ -280,7 +291,7 @@ button {
 
 .pdf-viewer {
   width: 100%;
-  height: 700px;
+  height: 450px;
   border: none;
   display: block;
 }
@@ -324,6 +335,9 @@ button {
   overflow: hidden;
   transition: all 0.3s ease;
   position: relative;
+  width: 810px;
+  height: 610px;
+  margin: 0 auto;
 }
 
 .video-container::before {
@@ -369,7 +383,7 @@ button {
 .video-player {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 450px;
   background: #000;
   border-radius: 0;
 }
@@ -396,9 +410,51 @@ button {
 }
 
 /*==================== RESPONSIVE DESIGN ====================*/
+@media (max-width: 1200px) {
+  /* 中等屏幕：文档2列，视频1列 */
+  #documents .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #videos .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pdf-document {
+    width: 100%;
+    max-width: 550px;
+  }
+
+  .video-container {
+    width: 100%;
+    max-width: 810px;
+  }
+}
+
 @media (max-width: 768px) {
-  .content-grid {
+  /* 移动端：全部单列 */
+  #documents .content-grid,
+  #videos .content-grid {
+    grid-template-columns: 1fr;
     gap: var(--space-12);
+  }
+
+  .pdf-document {
+    width: 100%;
+    height: auto;
+  }
+
+  .video-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .pdf-viewer {
+    height: 400px;
+  }
+
+  .video-player {
+    height: 300px;
   }
 
   .pdf-header,

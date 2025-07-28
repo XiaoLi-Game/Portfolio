@@ -26,24 +26,5 @@ package-lock.json
 dist/
 build/
 
-# 作品文件（不上传到仓库）
-*.pdf
-*.mp4
-*.avi
-*.mov
-*.wmv
-*.flv
-*.mkv
-*.webm
-
-# 大文件和媒体文件
-assets/*.pdf
-assets/*.mp4
-assets/*.avi
-assets/*.mov
-*.zip
-*.rar
-*.7z
-
 # 个人文档
 添加作品指南.txt

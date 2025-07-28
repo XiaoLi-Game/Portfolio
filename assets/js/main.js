@@ -4,7 +4,7 @@ const documentsData = [
         id: 1,
         title: "BUMP！SuperBrawl深度体验与拆解分析报告",
         description: "对BUMP！SuperBrawl游戏的深度分析报告，包含游戏机制、用户体验和商业模式分析。",
-        filePath: "assets/BUMP！SuperBrawl深度体验与拆解分析报告.pdf"
+        filePath: "作品\文档\BUMP！SuperBrawl深度体验与拆解分析报告.pdf"
     }
     // 添加更多文档...
 ];
@@ -12,10 +12,18 @@ const documentsData = [
 const videosData = [
     {
         id: 1,
-        title: "游戏演示视频",
-        description: "展示游戏核心玩法和特色功能",
-        filePath: "2025-07-22 22-33-14.mp4",
-        duration: "2:33"
+        title: "滚动棋子",
+        description: "一个控制骰子的地牢策略闯关游戏",
+        filePath: "作品\文档\Demo\滚动棋子.mp4",
+        duration: "1:15"
+    },
+
+    {
+        id: 2,
+        title: "鼠标",
+        description: "一个控制鼠标的肉鸽游戏",
+        filePath: "作品\文档\Demo\鼠标.mp4",
+        duration: "1:11"
     }
     // 添加更多视频...
 ];
