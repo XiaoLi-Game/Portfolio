@@ -2,30 +2,39 @@
 const documentsData = [
     {
         id: 1,
-        title: "BUMP！SuperBrawl深度体验与拆解分析报告",
-        description: "对BUMP！SuperBrawl游戏的深度分析报告，包含游戏机制、用户体验和商业模式分析。",
-        filePath: "作品\文档\BUMP！SuperBrawl深度体验与拆解分析报告.pdf"
+        title: "游戏策划文档示例1",
+        description: "这是一个游戏策划文档的示例，展示游戏设计理念和核心玩法机制。",
+        filePath: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+    },
+    {
+        id: 2,
+        title: "游戏策划文档示例2",
+        description: "这是第二个游戏策划文档示例，包含详细的系统设计和平衡性分析。",
+        filePath: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+    },
+    {
+        id: 3,
+        title: "游戏策划文档示例3",
+        description: "这是第三个游戏策划文档示例，展示完整的游戏开发流程和规范。",
+        filePath: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
     }
-    // 添加更多文档...
 ];
 
 const videosData = [
     {
         id: 1,
-        title: "滚动棋子",
-        description: "一个控制骰子的地牢策略闯关游戏",
-        filePath: "作品\文档\Demo\滚动棋子.mp4",
-        duration: "1:15"
+        title: "游戏Demo示例1",
+        description: "这是一个游戏Demo示例，展示核心玩法和游戏特色。",
+        filePath: "https://www.w3schools.com/html/mov_bbb.mp4",
+        duration: "0:10"
     },
-
     {
         id: 2,
-        title: "鼠标",
-        description: "一个控制鼠标的肉鸽游戏",
-        filePath: "作品\文档\Demo\鼠标.mp4",
-        duration: "1:11"
+        title: "游戏Demo示例2",
+        description: "这是第二个游戏Demo示例，展示完整的游戏流程和体验。",
+        filePath: "https://www.w3schools.com/html/movie.mp4",
+        duration: "0:13"
     }
-    // 添加更多视频...
 ];
 
 // 初始化应用
