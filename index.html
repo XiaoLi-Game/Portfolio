@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小栗Game - 游戏策划作品集</title>
+    <meta name="description" content="小栗Game游戏策划作品集，展示PDF策划文档和游戏演示视频">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- 预加载关键资源 -->
+    <link rel="preload" href="assets/css/styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="assets/js/main.js" as="script">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">小栗Game</h1>
+            <p class="subtitle">游戏策划作品集</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- PDF Documents Section -->
+        <section class="documents-section">
+            <div class="container">
+                <h2 class="section-title">策划文档</h2>
+                <div class="documents-grid" id="documentsGrid">
+                    <!-- PDF cards will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Wall Section -->
+        <section class="videos-section">
+            <div class="container">
+                <h2 class="section-title">游戏演示</h2>
+                <div class="videos-grid" id="videosGrid">
+                    <!-- Video cards will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PDF Viewer Modal -->
+    <div class="modal" id="pdfModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">文档预览</h3>
+                <div class="modal-controls">
+                    <button class="btn-download" id="downloadBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7,10 12,15 17,10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        下载
+                    </button>
+                    <button class="btn-close" id="closeModal">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="pdf-controls">
+                    <button id="prevPage">上一页</button>
+                    <span id="pageInfo">1 / 1</span>
+                    <button id="nextPage">下一页</button>
+                    <div class="zoom-controls">
+                        <button id="zoomOut">-</button>
+                        <span id="zoomLevel">100%</span>
+                        <button id="zoomIn">+</button>
+                    </div>
+                </div>
+                <div class="pdf-viewer">
+                    <canvas id="pdfCanvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="modal video-modal" id="videoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">视频播放</h3>
+                <button class="modal-close" id="closeVideoModal">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <video id="fullscreenVideo" controls>
+                    <source src="" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
