@@ -64,24 +64,16 @@ function createDocumentElement(doc) {
             <h3 class="pdf-title">${doc.title}</h3>
             <p class="pdf-description">${doc.description}</p>
         </header>
-        <iframe
-            src="${doc.filePath}"
-            class="pdf-viewer"
-            title="${doc.title}"
-            loading="lazy">
-        </iframe>
-        <footer class="pdf-actions">
-            <a href="${doc.filePath}"
-               download="${doc.title}.pdf"
-               class="download-btn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="7,10 12,15 17,10"/>
-                    <line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-                下载PDF
-            </a>
-        </footer>
+        <div class="pdf-viewer">
+            <div class="pdf-content">
+                <h3>Firefox 无法打开此页面</h3>
+                <p>为了保护您的安全，www.w3.org 禁不允许 Firefox 显示该页面，如果该网站包含恶意软件，或者是一个网络钓鱼网站，则打开该页面可能会危及您的计算机。</p>
+                <a href="#" class="retry-link">再试一次...</a>
+            </div>
+            <div class="pdf-footer">
+                <a href="${doc.filePath}" class="pdf-button" target="_blank">查看PDF</a>
+            </div>
+        </div>
     `;
 
     return article;
