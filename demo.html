@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Docs Viewer 演示</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .demo-section {
+            margin: 40px 0;
+            padding: 20px;
+            border: 1px solid #e1e5e9;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+        .demo-title {
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+        .viewer-container {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .code-block {
+            background: #f1f3f4;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Google Docs Viewer 功能演示</h1>
+    
+    <div class="note success">
+        <strong>✅ 功能已成功集成！</strong> 您的作品集现在支持Google Docs Viewer和嵌入式视频播放器。
+    </div>
+
+    <div class="demo-section">
+        <h2 class="demo-title">📄 Google Docs Viewer 演示</h2>
+        <p>以下是使用Google Docs Viewer展示PDF文档的示例：</p>
+        
+        <div class="code-block">
+// 在 assets/js/main.js 中配置：
+{
+    id: 1,
+    title: "示例文档",
+    description: "这是一个示例PDF文档",
+    filePath: "assets/document.pdf",
+    googleDriveId: null,
+    fullUrl: "https://yourusername.github.io/repository/assets/document.pdf",
+    coverImage: null
+}
+        </div>
+
+        <div class="viewer-container">
+            <iframe 
+                src="https://docs.google.com/viewer?url=https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf&embedded=true" 
+                width="100%" 
+                height="100%" 
+                frameborder="0">
+            </iframe>
+        </div>
+        
+        <div class="note">
+            <strong>💡 提示：</strong> 这是一个示例PDF文档。在实际使用中，请替换为您自己的文档URL。
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2 class="demo-title">🎥 YouTube 视频嵌入演示</h2>
+        <p>以下是嵌入YouTube视频的示例：</p>
+        
+        <div class="code-block">
+// 在 assets/js/main.js 中配置：
+{
+    id: 1,
+    title: "演示视频",
+    description: "YouTube视频嵌入示例",
+    filePath: null,
+    duration: "1:30",
+    youtubeId: "dQw4w9WgXcQ",
+    thumbnail: "assets/images/video-thumb.jpg"
+}
+        </div>
+
+        <div class="viewer-container">
+            <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2 class="demo-title">⚙️ 配置说明</h2>
+        
+        <h3>📋 文档配置选项：</h3>
+        <ul>
+            <li><strong>filePath</strong>: 本地PDF文件路径</li>
+            <li><strong>googleDriveId</strong>: Google Drive文件ID（推荐）</li>
+            <li><strong>fullUrl</strong>: 完整的文件URL（用于GitHub Pages）</li>
+        </ul>
+
+        <h3>🎬 视频配置选项：</h3>
+        <ul>
+            <li><strong>filePath</strong>: 本地视频文件路径（MP4格式）</li>
+            <li><strong>youtubeId</strong>: YouTube视频ID</li>
+            <li><strong>thumbnail</strong>: 视频缩略图路径</li>
+        </ul>
+
+        <div class="note warning">
+            <strong>⚠️ 注意事项：</strong>
+            <ul>
+                <li>Google Drive文件需要设置为"任何人都可以查看"</li>
+                <li>YouTube视频需要允许嵌入</li>
+                <li>本地文件需要确保路径正确</li>
+                <li>建议PDF文件不超过50MB</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2 class="demo-title">🔧 如何使用</h2>
+        
+        <h3>步骤1：配置文档数据</h3>
+        <div class="code-block">
+// 编辑 assets/js/main.js 文件
+const documentsData = [
+    {
+        id: 1,
+        title: "您的文档标题",
+        description: "文档描述",
+        filePath: "assets/your-document.pdf",
+        googleDriveId: null, // 或者填入Google Drive文件ID
+        fullUrl: null,
+        coverImage: null
+    }
+];
+        </div>
+
+        <h3>步骤2：配置视频数据</h3>
+        <div class="code-block">
+// 编辑 assets/js/main.js 文件
+const videosData = [
+    {
+        id: 1,
+        title: "您的视频标题",
+        description: "视频描述",
+        filePath: "assets/your-video.mp4", // 本地视频
+        duration: "2:33",
+        youtubeId: null, // 或者填入YouTube视频ID
+        thumbnail: null
+    }
+];
+        </div>
+
+        <h3>步骤3：上传文件并测试</h3>
+        <ol>
+            <li>将PDF和视频文件上传到 <code>assets/</code> 目录</li>
+            <li>或者上传到Google Drive并获取文件ID</li>
+            <li>更新配置文件</li>
+            <li>在浏览器中测试功能</li>
+        </ol>
+    </div>
+
+    <div class="note success">
+        <h3>🎉 恭喜！</h3>
+        <p>您的作品集现在具备了专业级的文档和视频展示功能，就像您截图中看到的那样！用户可以：</p>
+        <ul>
+            <li>✅ 直接在网页中预览PDF文档，无需下载</li>
+            <li>✅ 观看嵌入式视频，支持本地和YouTube</li>
+            <li>✅ 享受响应式设计，在各种设备上都有良好体验</li>
+            <li>✅ 使用现代化的界面和流畅的交互</li>
+        </ul>
+    </div>
+
+    <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #e1e5e9; text-align: center; color: #6c757d;">
+        <p>📚 查看 <code>GOOGLE_DOCS_SETUP.md</code> 获取详细配置说明</p>
+    </footer>
+</body>
+</html>
