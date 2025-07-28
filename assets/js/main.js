@@ -4,7 +4,7 @@ const documentsData = [
         id: 1,
         title: "BUMP！SuperBrawl深度体验与拆解分析报告",
         description: "对BUMP！SuperBrawl游戏进行深度体验分析，包含游戏机制拆解、玩法设计分析和优化建议。",
-        filePath: "作品/BUMP！SuperBrawl深度体验与拆解分析报告.pdf"
+        filePath: "作品/文档/BUMP！SuperBrawl深度体验与拆解分析报告.pdf"
     },
     {
         id: 2,
@@ -25,14 +25,14 @@ const videosData = [
         id: 1,
         title: "滚动棋子游戏Demo",
         description: "展示滚动棋子游戏的核心玩法机制，包含物理引擎和交互设计。",
-        filePath: "作品/滚动棋子.mp4",
+        filePath: "作品/文档/Demo/滚动棋子.mp4",
         duration: "视频演示"
     },
     {
         id: 2,
         title: "鼠标交互Demo",
         description: "展示鼠标交互系统的设计与实现，包含用户界面和操作反馈。",
-        filePath: "作品/鼠标.mp4",
+        filePath: "作品/文档/Demo/鼠标.mp4",
         duration: "视频演示"
     }
 ];
