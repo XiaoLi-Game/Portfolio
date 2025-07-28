@@ -23,15 +23,15 @@ const documentsData = [
 const videosData = [
     {
         id: 1,
-        title: "滚动棋子游戏Demo",
-        description: "展示滚动棋子游戏的核心玩法机制，包含物理引擎和交互设计。",
+        title: "滚动棋子",
+        description: "一个控制骰子的地牢策略闯关游戏。",
         filePath: "assets/作品/滚动棋子.mp4",
         duration: "视频演示"
     },
     {
         id: 2,
-        title: "鼠标交互Demo",
-        description: "展示鼠标交互系统的设计与实现，包含用户界面和操作反馈。",
+        title: "鼠标",
+        description: "一个控制鼠标的肉鸽游戏。",
         filePath: "assets/作品/鼠标.mp4",
         duration: "视频演示"
     }
